@@ -1,25 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import Card from './Card';
+import State from './state';
+import ClassCom from './ClassCom';
+import Form from './Form';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <p>Hello World</p>
+      <GreetUser name="Oghenemeru" age="24" /> */}
+      <Card name="Oghenemeru Avwemoya" handle="@meruAvwemoya" />
+      <State />
+      <ClassCom />
+      <Form />
     </div>
   );
+}
+
+
+function GreetUser(props) {
+  const {name, age} = props
+  return (
+    <p>Hello {name}, you are {age ? age : "-"}</p>
+  )
 }
 
 export default App;
